@@ -11,18 +11,26 @@ function handleNewTodoChange (e){
 }
 function handleNewTodo(e){
   e.preventDefault()
-  console.log(todos)
+  if (newTodo === "") return
+  setTodos([...todos, {id: Date.now(), text: newTodo}])
+  e.target.reset()
+}
+function removeTodo(id){
+  setTodos(todos.filter((todo)=> todo.id != id))
 }
   return (
-    <div className="ToDoList">
+    <div className="toDoList">
       <h1>ToDo</h1>
       <form onSubmit={handleNewTodo}>
-        <input placeholder="Your todo list..." onchange={handleNewTodoChange}/>
+        <input placeholder="Your todo list..." onChange={handleNewTodoChange}/>
         <ul>
-          <li>Buy bread</li>
-          <li>Get dry cleaning</li>
-          <li>Clean car</li>
-          <li>Meet Danny at park</li>
+        {todos.map((todo) => (
+          <li key=
+          {todo.id}>
+          {todo.text}
+          <a href="#" onClick={() => removeTodo(todo.id)}>X</a>
+          </li>
+        ))}
         </ul>
       </form>
     </div>
