@@ -21,7 +21,8 @@ code {
 
 
 #root{
-  width: 70vw;
+  width: 50vw;
+  min-height: 50vh;
   margin: 0 auto;
   text-align: center;
   padding: 3rem;
@@ -30,33 +31,41 @@ code {
   color: antiquewhite;
   box-shadow: 15px 15px 5px rgba(36, 36, 36, 0.801);
 }
+
 form{
-  width: 550px;
+  width: 25vw;
   text-align: center;
   margin: 0 auto;
 }
+
 .toDoList h1{
   margin-bottom: 2rem; 
   text-shadow: 3px 3px 3px rgba(48, 47, 47, 0.808);
 }
+
 .toDoList ul{
   list-style: none;
   text-align: start;
 }
+
 input{
   padding:10px 20px;
   border-radius: 15px;
-  border: 1px solid rgb(148, 112, 21)
+  border: 1px solid rgb(148, 112, 21);
+  font-variant: small-caps;
+  font-size: 1em;
+  letter-spacing: .2em;
 }
+
 .toDoList li{
   padding: 1rem;
   font-variant: small-caps;
   background: rgb(223, 196, 138);
   border-radius: 15px;
-  color: #4d4d4d;
+  color: black;/* 
   color: white;
   font-weight: bold;
-  text-shadow: 2px 2px 2px rgba(48, 47, 47, 0.808);
+  text-shadow: 2px 2px 2px rgba(48, 47, 47, 0.808); */
 ;
   width: 450px;
   margin: 1rem auto;
@@ -65,19 +74,54 @@ input{
   justify-content: space-between;
   box-shadow: 5px 5px 5px rgba(36, 36, 36, 0.801);
 }
+
+#saveBtn{
+ display: inline-block;
+ border-radius: 50%;
+ background: rgb(223, 196, 138);
+ width: 50px;
+}
+#plusIcon{
+  width: 2rem;
+}
+
 .toDoList li:hover{
   position: relative;
   top: 1px;
 }
-button{
-  margin: 0 1rem;
+
+.inputDiv{
+  display: flex;
 }
+
+button{
+  margin-left: 1rem;
+}
+
+
+
 input{
   width: 100%;
+  display: inline-block;
 }
+
 a{
   color: red;
   margin-left: 1rem;
   text-decoration: none;
   cursor: pointer;
+}
+
+#clearBtn{
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#cancelImg{
+  width: 1rem;
 }
